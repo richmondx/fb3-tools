@@ -1,0 +1,21 @@
+// Copyright PistonMiner, all rights reserved
+
+//--------------------------------------
+//--- 010 Editor v6.0.2 Binary Template
+//
+// File: CAT.bt
+// Author: PistonMiner
+// Revision: 0.1
+// Purpose: Template for FB3 CAT index files.
+//--------------------------------------
+
+char nyan[16];
+
+struct entry {
+    byte sha1[20]<format=hex>;
+    int32 offset<format=hex>;
+    int32 size<format=hex>;
+    int32 cas_num;
+};
+
+entry entries[(FileSize() - 16) / sizeof(entry)];

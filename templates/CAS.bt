@@ -1,0 +1,23 @@
+// Copyright PistonMiner, all rights reserved
+
+//--------------------------------------
+//--- 010 Editor v6.0.2 Binary Template
+//
+// File: CAS.bt
+// Author: PistonMiner
+// Revision: 0.1
+// Purpose: Template for FB3 CAS data files.
+//--------------------------------------
+
+struct entry {
+    char header[4];
+    char sha1[20];
+    int32 data_length;
+    char padding[4];
+    byte data[data_length];
+};
+
+while(!FEof())
+{
+    entry entries;
+}
