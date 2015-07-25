@@ -1,0 +1,25 @@
+// Copyright PistonMiner, all rights reserved
+
+//--------------------------------------
+//--- 010 Editor v6.0.2 Binary Template
+//
+// File: XOR.bt
+// Author: PistonMiner
+// Revision: 0.1
+// Purpose: Template for FB3 XOR encrypted files.
+//--------------------------------------
+
+byte signature[4];
+byte unkown[4];
+
+char hash_delimit;
+byte hash[256];
+char hash_delimit;
+
+byte unknown[30];
+
+byte lookup[257];
+
+byte padding[3];
+
+byte content[FileSize() - FTell()];
